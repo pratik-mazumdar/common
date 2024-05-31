@@ -15,9 +15,9 @@ import {
 } from "@sequelize/core/decorators-legacy";
 
 @Table
-export class Locations extends Model<
-  InferAttributes<Locations>,
-  InferCreationAttributes<Locations>
+export class SearchRequests extends Model<
+  InferAttributes<SearchRequests>,
+  InferCreationAttributes<SearchRequests>
 > {
   @DeletedAt
   declare deleted_at: Date | null;

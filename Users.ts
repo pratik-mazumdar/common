@@ -4,7 +4,6 @@ import {
   InferCreationAttributes,
   sql,
   DataTypes,
-  Sequelize,
 } from "@sequelize/core";
 import {
   Attribute,
