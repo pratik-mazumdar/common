@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "tsc && git add . && git commit -m '${npm_config_foo}' && git push",
-    "argument": "echo \"The value of  is '${npm_config_foo}' hello \""
+    "publish": "tsc && git add . && git commit -m '${npm_config_foo}' && git push"
   },
   "repository": {
     "type": "git",
