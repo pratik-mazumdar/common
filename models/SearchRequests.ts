@@ -3,6 +3,7 @@ import {
   InferAttributes,
   InferCreationAttributes,
   DataTypes,
+  CreationOptional,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -10,11 +11,11 @@ import {
   CreatedAt,
   UpdatedAt,
   NotNull,
-  Table,
   Unique,
+  PrimaryKey,
+  AutoIncrement,
 } from "@sequelize/core/decorators-legacy";
 
-@Table
 export class SearchRequests extends Model<
   InferAttributes<SearchRequests>,
   InferCreationAttributes<SearchRequests>
@@ -25,6 +26,12 @@ export class SearchRequests extends Model<
   declare created_at: any;
   @UpdatedAt
   declare updated_at: any;
+
+  @Attribute(DataTypes.BIGINT)
+  @NotNull
+  @PrimaryKey
+  @AutoIncrement
+  declare id: CreationOptional<number>;
 
   @Attribute(DataTypes.STRING)
   @Unique

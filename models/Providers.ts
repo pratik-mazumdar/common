@@ -12,10 +12,8 @@ import {
   UpdatedAt,
   NotNull,
   PrimaryKey,
-  Table,
 } from "@sequelize/core/decorators-legacy";
 
-@Table({ noPrimaryKey: true })
 export class Providers extends Model<
   InferAttributes<Providers>,
   InferCreationAttributes<Providers>

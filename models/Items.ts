@@ -12,14 +12,12 @@ import {
   UpdatedAt,
   NotNull,
   PrimaryKey,
-  Table,
   HasMany,
   HasOne,
 } from "@sequelize/core/decorators-legacy";
-import { Locations } from "Locations";
-import { Providers } from "Providers";
+import { Locations } from "./Locations";
+import { Providers } from "./Providers";
 
-@Table({ noPrimaryKey: true })
 export class Items extends Model<
   InferAttributes<Items>,
   InferCreationAttributes<Items>

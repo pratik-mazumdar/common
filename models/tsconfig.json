@@ -29,8 +29,7 @@
     "baseUrl": ".",
     "esModuleInterop": true,
 
-    /* Experimental Options */
-    "experimentalDecorators": true,
+    "experimentalDecorators": true ,
     "emitDecoratorMetadata": true,
 
     /* Advanced Options */
