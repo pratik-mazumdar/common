@@ -29,12 +29,12 @@
     "baseUrl": ".",
     "esModuleInterop": true,
 
-    "experimentalDecorators": true ,
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   },
   "include": ["."],
-  "exclude": ["node_modules", "dist", "test"]
+  "exclude": ["node_modules", "locals", "models", "test"]
 }

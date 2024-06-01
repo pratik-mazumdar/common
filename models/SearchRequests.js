@@ -17,14 +17,17 @@ class SearchRequests extends core_1.Model {
 exports.SearchRequests = SearchRequests;
 __decorate([
     decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deleted_at"),
     __metadata("design:type", Object)
-], SearchRequests.prototype, "deleted_at", void 0);
+], SearchRequests.prototype, "deletedAt", void 0);
 __decorate([
     decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
     __metadata("design:type", Object)
 ], SearchRequests.prototype, "created_at", void 0);
 __decorate([
     decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], SearchRequests.prototype, "updated_at", void 0);
 __decorate([

@@ -21,6 +21,14 @@ __decorate([
     __metadata("design:type", Object)
 ], User.prototype, "deletedAt", void 0);
 __decorate([
+    decorators_legacy_1.CreatedAt,
+    __metadata("design:type", Object)
+], User.prototype, "createdAt", void 0);
+__decorate([
+    decorators_legacy_1.UpdatedAt,
+    __metadata("design:type", Object)
+], User.prototype, "updatedAt", void 0);
+__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.TEXT),
     __metadata("design:type", String)
 ], User.prototype, "dev_key", void 0);
@@ -37,13 +45,13 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], User.prototype, "display", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(core_1.sql.uuidV4),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], User.prototype, "id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
@@ -67,7 +75,7 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], User.prototype, "verified", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.INTEGER),

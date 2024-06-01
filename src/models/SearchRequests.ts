@@ -14,6 +14,7 @@ import {
   Unique,
   PrimaryKey,
   AutoIncrement,
+  ColumnName,
 } from "@sequelize/core/decorators-legacy";
 
 export class SearchRequests extends Model<
@@ -21,11 +22,16 @@ export class SearchRequests extends Model<
   InferCreationAttributes<SearchRequests>
 > {
   @DeletedAt
-  declare deleted_at: Date | null;
+  @ColumnName("deleted_at")
+  declare deletedAt: Date | null;
+
   @CreatedAt
-  declare created_at: any;
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
   @UpdatedAt
-  declare updated_at: any;
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 
   @Attribute(DataTypes.BIGINT)
   @NotNull

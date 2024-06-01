@@ -3,6 +3,7 @@ import {
   InferAttributes,
   InferCreationAttributes,
   DataTypes,
+  CreationOptional,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -12,6 +13,7 @@ import {
   UpdatedAt,
   NotNull,
   PrimaryKey,
+  ColumnName,
 } from "@sequelize/core/decorators-legacy";
 
 export class Providers extends Model<
@@ -19,11 +21,16 @@ export class Providers extends Model<
   InferCreationAttributes<Providers>
 > {
   @DeletedAt
-  declare deleted_at: Date | null;
+  @ColumnName("deleted_at")
+  declare deletedAt: Date | null;
+
   @CreatedAt
-  declare created_at: any;
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
   @UpdatedAt
-  declare updated_at: any;
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -37,7 +44,7 @@ export class Providers extends Model<
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(true)
-  declare label: boolean;
+  declare label: CreationOptional<boolean>;
 
   @Attribute(DataTypes.STRING)
   @NotNull

@@ -17,14 +17,17 @@ class Providers extends core_1.Model {
 exports.Providers = Providers;
 __decorate([
     decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deleted_at"),
     __metadata("design:type", Object)
-], Providers.prototype, "deleted_at", void 0);
+], Providers.prototype, "deletedAt", void 0);
 __decorate([
     decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
     __metadata("design:type", Object)
 ], Providers.prototype, "created_at", void 0);
 __decorate([
     decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Providers.prototype, "updated_at", void 0);
 __decorate([
@@ -42,7 +45,7 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(true),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], Providers.prototype, "label", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),

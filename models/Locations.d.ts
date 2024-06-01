@@ -1,15 +1,15 @@
-import { Model, InferAttributes, InferCreationAttributes } from "@sequelize/core";
+import { Model, InferAttributes, InferCreationAttributes, CreationOptional } from "@sequelize/core";
 export declare class Locations extends Model<InferAttributes<Locations>, InferCreationAttributes<Locations>> {
-    deleted_at: Date | null;
-    created_at: any;
-    updated_at: any;
+    deletedAt: Date | null;
+    created_at: CreationOptional<Date>;
+    updated_at: CreationOptional<Date>;
     id: string;
     provider_id: string;
-    label: boolean;
-    days: Array<number>;
+    label: CreationOptional<boolean>;
+    days: CreationOptional<Array<number>>;
     start: string;
     end: string;
     gps: string;
-    radius: number;
+    radius: CreationOptional<number>;
     address: Record<any, any>;
 }

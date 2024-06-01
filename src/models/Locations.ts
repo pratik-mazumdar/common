@@ -3,6 +3,7 @@ import {
   InferAttributes,
   InferCreationAttributes,
   DataTypes,
+  CreationOptional,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -13,6 +14,7 @@ import {
   NotNull,
   PrimaryKey,
   HasMany,
+  ColumnName,
 } from "@sequelize/core/decorators-legacy";
 import { Providers } from "./Providers";
 
@@ -21,11 +23,16 @@ export class Locations extends Model<
   InferCreationAttributes<Locations>
 > {
   @DeletedAt
-  declare deleted_at: Date | null;
+  @ColumnName("deleted_at")
+  declare deletedAt: Date | null;
+
   @CreatedAt
-  declare created_at: any;
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
   @UpdatedAt
-  declare updated_at: any;
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -35,16 +42,17 @@ export class Locations extends Model<
   @Attribute(DataTypes.STRING)
   @NotNull
   @HasMany(() => Providers, "id")
+  @ColumnName("providerId")
   declare provider_id: string;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(true)
-  declare label: boolean;
+  declare label: CreationOptional<boolean>;
 
   @Attribute(DataTypes.ARRAY(DataTypes.SMALLINT))
   @Default([1, 2, 3, 4, 5, 6, 7])
-  declare days: Array<number>;
+  declare days: CreationOptional<Array<number>>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -61,7 +69,7 @@ export class Locations extends Model<
   @Attribute(DataTypes.INTEGER)
   @NotNull
   @Default(0)
-  declare radius: number;
+  declare radius: CreationOptional<number>;
 
   @Attribute(DataTypes.JSONB)
   @NotNull

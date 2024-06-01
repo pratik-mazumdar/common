@@ -19,14 +19,17 @@ class Items extends core_1.Model {
 exports.Items = Items;
 __decorate([
     decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deleted_at"),
     __metadata("design:type", Object)
-], Items.prototype, "deleted_at", void 0);
+], Items.prototype, "deletedAt", void 0);
 __decorate([
     decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
     __metadata("design:type", Object)
 ], Items.prototype, "created_at", void 0);
 __decorate([
     decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Items.prototype, "updated_at", void 0);
 __decorate([
@@ -39,35 +42,39 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.HasMany)(() => Providers_1.Providers, "id"),
+    (0, decorators_legacy_1.ColumnName)("providerId"),
     __metadata("design:type", String)
 ], Items.prototype, "provider_id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.HasOne)(() => Locations_1.Locations, "id"),
+    (0, decorators_legacy_1.ColumnName)("locationId"),
     __metadata("design:type", String)
 ], Items.prototype, "location_id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(true),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], Items.prototype, "label", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], Items.prototype, "stock", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
+    decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], Items.prototype, "returnable", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
+    decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", Object)
 ], Items.prototype, "cancellable", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.JSONB),
@@ -111,7 +118,7 @@ __decorate([
     __metadata("design:type", String)
 ], Items.prototype, "return_window", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.DECIMAL(20, 2).ZEROFILL),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.DECIMAL(20, 2)),
     decorators_legacy_1.NotNull,
     __metadata("design:type", Number)
 ], Items.prototype, "price", void 0);

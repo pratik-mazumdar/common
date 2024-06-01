@@ -3,6 +3,7 @@ import {
   InferAttributes,
   InferCreationAttributes,
   DataTypes,
+  CreationOptional,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -14,6 +15,7 @@ import {
   PrimaryKey,
   HasMany,
   HasOne,
+  ColumnName,
 } from "@sequelize/core/decorators-legacy";
 import { Locations } from "./Locations";
 import { Providers } from "./Providers";
@@ -23,11 +25,16 @@ export class Items extends Model<
   InferCreationAttributes<Items>
 > {
   @DeletedAt
-  declare deleted_at: Date | null;
+  @ColumnName("deleted_at")
+  declare deletedAt: Date | null;
+
   @CreatedAt
-  declare created_at: any;
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
   @UpdatedAt
-  declare updated_at: any;
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -37,30 +44,34 @@ export class Items extends Model<
   @Attribute(DataTypes.STRING)
   @NotNull
   @HasMany(() => Providers, "id")
+  @ColumnName("providerId")
   declare provider_id: string;
 
   @Attribute(DataTypes.STRING)
   @NotNull
   @HasOne(() => Locations, "id")
+  @ColumnName("locationId")
   declare location_id: string;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(true)
-  declare label: boolean;
+  declare label: CreationOptional<boolean>;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(false)
-  declare stock: boolean;
+  declare stock: CreationOptional<boolean>;
 
   @Attribute(DataTypes.BOOLEAN)
+  @NotNull
   @Default(false)
-  declare returnable: boolean;
+  declare returnable: CreationOptional<boolean>;
 
   @Attribute(DataTypes.BOOLEAN)
+  @NotNull
   @Default(false)
-  declare cancellable: boolean;
+  declare cancellable: CreationOptional<boolean>;
 
   @Attribute(DataTypes.JSONB)
   @NotNull
@@ -94,7 +105,7 @@ export class Items extends Model<
   @Attribute(DataTypes.STRING)
   declare return_window: string;
 
-  @Attribute(DataTypes.DECIMAL(20, 2).ZEROFILL)
+  @Attribute(DataTypes.DECIMAL(20, 2))
   @NotNull
   declare price: number;
 

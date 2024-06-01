@@ -4,13 +4,16 @@ import {
   InferCreationAttributes,
   sql,
   DataTypes,
+  CreationOptional,
 } from "@sequelize/core";
 import {
   Attribute,
+  CreatedAt,
   Default,
   DeletedAt,
   NotNull,
   PrimaryKey,
+  UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
 import { IsEmail, IsIn } from "@sequelize/validator.js";
 import { SmallIntegerDataType } from "sequelize/lib/data-types";
@@ -22,7 +25,9 @@ export class User extends Model<
 > {
   @DeletedAt
   declare deletedAt: Date | null;
+  @CreatedAt
   declare createdAt: any;
+  @UpdatedAt
   declare updatedAt: any;
 
   @Attribute(DataTypes.TEXT)
@@ -38,12 +43,12 @@ export class User extends Model<
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(false)
-  declare display: boolean;
+  declare display: CreationOptional<boolean>;
 
   @Attribute(DataTypes.UUID)
   @NotNull
   @Default(sql.uuidV4)
-  declare id: UUID;
+  declare id: CreationOptional<UUID>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -63,7 +68,7 @@ export class User extends Model<
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(false)
-  declare verified: boolean;
+  declare verified: CreationOptional<boolean>;
 
   @Attribute(DataTypes.INTEGER)
   declare otp: number | null;
@@ -71,5 +76,5 @@ export class User extends Model<
   @Attribute(DataTypes.SMALLINT)
   @NotNull
   @Default(4)
-  declare role: SmallIntegerDataType;
+  declare role: CreationOptional<SmallIntegerDataType>;
 }
