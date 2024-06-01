@@ -4,7 +4,6 @@ import {
   InferCreationAttributes,
   DataTypes,
   CreationOptional,
-  NonAttribute,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -14,20 +13,16 @@ import {
   UpdatedAt,
   NotNull,
   PrimaryKey,
-  HasMany,
-  HasOne,
   ColumnName,
 } from "@sequelize/core/decorators-legacy";
-import { Locations } from "./Locations";
-import { Providers } from "./Providers";
 
 export class Items extends Model<
   InferAttributes<Items>,
   InferCreationAttributes<Items>
 > {
   @DeletedAt
-  @ColumnName("deleted_at")
-  declare deletedAt: Date | null;
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
 
   @CreatedAt
   @ColumnName("createdAt")
@@ -44,15 +39,13 @@ export class Items extends Model<
 
   @Attribute(DataTypes.STRING)
   @NotNull
-  @HasMany(() => Providers, "id")
   @ColumnName("providerId")
-  declare provider_id?: NonAttribute<Providers[]>;
+  declare provider_id: string;
 
   @Attribute(DataTypes.STRING)
   @NotNull
-  @HasOne(() => Locations, "id")
   @ColumnName("locationId")
-  declare location_id?: NonAttribute<Locations[]>;
+  declare location_id: string;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull

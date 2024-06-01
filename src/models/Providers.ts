@@ -14,7 +14,10 @@ import {
   NotNull,
   PrimaryKey,
   ColumnName,
+  HasMany,
 } from "@sequelize/core/decorators-legacy";
+import { Items } from "./Items";
+import { Locations } from "./Locations";
 
 export class Providers extends Model<
   InferAttributes<Providers>,
@@ -36,6 +39,8 @@ export class Providers extends Model<
   @Attribute(DataTypes.STRING)
   @NotNull
   @PrimaryKey
+  @HasMany(() => Items, "provider_id")
+  @HasMany(() => Locations, "provider_id")
   declare id: string;
 
   @Attribute(DataTypes.STRING)
