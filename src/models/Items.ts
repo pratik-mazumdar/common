@@ -46,13 +46,13 @@ export class Items extends Model<
   @NotNull
   @HasMany(() => Providers, "id")
   @ColumnName("providerId")
-  declare provider_id: NonAttribute<Providers[]>;
+  declare provider_id?: NonAttribute<Providers[]>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
   @HasOne(() => Locations, "id")
   @ColumnName("locationId")
-  declare location_id: NonAttribute<Locations[]>;
+  declare location_id?: NonAttribute<Locations[]>;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull

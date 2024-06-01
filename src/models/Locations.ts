@@ -44,7 +44,7 @@ export class Locations extends Model<
   @NotNull
   @HasMany(() => Providers, "id")
   @ColumnName("providerId")
-  declare provider_id: NonAttribute<Providers[]>;
+  declare provider_id?: NonAttribute<Providers[]>;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
