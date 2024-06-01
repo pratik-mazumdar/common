@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "lib": ["es2022"],
     "declaration": true,
-    "outDir": "dist",
+    "outDir": ".",
     /* Basic Options */
     "resolveJsonModule": true,
     "types": ["node"],
