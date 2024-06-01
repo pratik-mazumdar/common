@@ -59,34 +59,3 @@ __decorate([
     decorators_legacy_1.NotNull,
     __metadata("design:type", String)
 ], SearchRequests.prototype, "bap_id", void 0);
-// import { DataTypes, ModelStatic } from "sequelize";
-// export const SearchRequests: ModelStatic<any> = sequelize.define(
-//   "SearchRequests",
-//   {
-//     id: {
-//       type: DataTypes.BIGINT,
-//       allowNull: false,
-//       autoIncrement: true,
-//       primaryKey: true,
-//     },
-//     transaction_id: {
-//       unique: true,
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     message_id: {
-//       unique: true,
-//       type: DataTypes.STRING,
-//       allowNull: true,
-//     },
-//     domain: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     bap_id: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//   },
-//   { timestamps: true, paranoid: true }
-// );
