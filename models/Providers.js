@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Providers = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
+const Items_1 = require("./Items");
+const Locations_1 = require("./Locations");
 class Providers extends core_1.Model {
 }
 exports.Providers = Providers;
@@ -34,6 +36,8 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     decorators_legacy_1.PrimaryKey,
+    (0, decorators_legacy_1.HasMany)(() => Items_1.Items, "provider_id"),
+    (0, decorators_legacy_1.HasMany)(() => Locations_1.Locations, "provider_id"),
     __metadata("design:type", String)
 ], Providers.prototype, "id", void 0);
 __decorate([

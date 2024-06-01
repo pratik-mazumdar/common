@@ -12,15 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Locations = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
-const Providers_1 = require("./Providers");
+const Items_1 = require("./Items");
 class Locations extends core_1.Model {
 }
 exports.Locations = Locations;
 __decorate([
     decorators_legacy_1.DeletedAt,
-    (0, decorators_legacy_1.ColumnName)("deleted_at"),
+    (0, decorators_legacy_1.ColumnName)("deletedAt"),
     __metadata("design:type", Object)
-], Locations.prototype, "deletedAt", void 0);
+], Locations.prototype, "deleted_at", void 0);
 __decorate([
     decorators_legacy_1.CreatedAt,
     (0, decorators_legacy_1.ColumnName)("createdAt"),
@@ -35,14 +35,14 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     decorators_legacy_1.PrimaryKey,
+    (0, decorators_legacy_1.HasOne)(() => Items_1.Items, "location_id"),
     __metadata("design:type", String)
 ], Locations.prototype, "id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
-    (0, decorators_legacy_1.HasMany)(() => Providers_1.Providers, "id"),
     (0, decorators_legacy_1.ColumnName)("providerId"),
-    __metadata("design:type", Object)
+    __metadata("design:type", String)
 ], Locations.prototype, "provider_id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
