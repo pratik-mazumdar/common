@@ -4,6 +4,7 @@ import {
   InferCreationAttributes,
   DataTypes,
   CreationOptional,
+  NonAttribute,
 } from "@sequelize/core";
 import {
   Attribute,
@@ -43,7 +44,7 @@ export class Locations extends Model<
   @NotNull
   @HasMany(() => Providers, "id")
   @ColumnName("providerId")
-  declare provider_id: string;
+  declare provider_id: NonAttribute<Providers[]>;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull

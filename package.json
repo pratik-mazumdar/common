@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pratik-mazumdar/database-models.git"
+    "url": "git+https://github.com/pratik-mazumdar/common.git"
   },
   "author": "Pratik Mazumdar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pratik-mazumdar/database-models/issues"
+    "url": "https://github.com/pratik-mazumdar/common/issues"
   },
-  "homepage": "https://github.com/pratik-mazumdar/database-models#readme",
+  "homepage": "https://github.com/pratik-mazumdar/common#readme",
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.37",
     "@sequelize/validator.js": "^7.0.0-alpha.41",

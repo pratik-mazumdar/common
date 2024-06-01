@@ -43,14 +43,14 @@ __decorate([
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.HasMany)(() => Providers_1.Providers, "id"),
     (0, decorators_legacy_1.ColumnName)("providerId"),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], Items.prototype, "provider_id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.HasOne)(() => Locations_1.Locations, "id"),
     (0, decorators_legacy_1.ColumnName)("locationId"),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], Items.prototype, "location_id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),

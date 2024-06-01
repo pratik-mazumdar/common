@@ -32,6 +32,7 @@ export class Providers extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 
+  // This is the combination of provider_id and bpp_id
   @Attribute(DataTypes.STRING)
   @NotNull
   @PrimaryKey

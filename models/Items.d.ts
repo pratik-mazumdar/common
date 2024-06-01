@@ -1,11 +1,13 @@
-import { Model, InferAttributes, InferCreationAttributes, CreationOptional } from "@sequelize/core";
+import { Model, InferAttributes, InferCreationAttributes, CreationOptional, NonAttribute } from "@sequelize/core";
+import { Locations } from "./Locations";
+import { Providers } from "./Providers";
 export declare class Items extends Model<InferAttributes<Items>, InferCreationAttributes<Items>> {
     deletedAt: Date | null;
     created_at: CreationOptional<Date>;
     updated_at: CreationOptional<Date>;
     id: string;
-    provider_id: string;
-    location_id: string;
+    provider_id: NonAttribute<Providers[]>;
+    location_id: NonAttribute<Locations[]>;
     label: CreationOptional<boolean>;
     stock: CreationOptional<boolean>;
     returnable: CreationOptional<boolean>;
