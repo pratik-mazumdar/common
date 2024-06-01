@@ -1,5 +1,5 @@
 {
-  "name": "database-models",
+  "name": "@common",
   "version": "1.0.0",
   "description": "Contains all the models for ONDC's API based project",
   "main": "dist/index.js",
