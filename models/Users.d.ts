@@ -3,9 +3,6 @@ import { Model, InferAttributes, InferCreationAttributes, CreationOptional } fro
 import { SmallIntegerDataType } from "sequelize/lib/data-types";
 import { UUID } from "node:crypto";
 export declare class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
-    deletedAt: Date | null;
-    createdAt: any;
-    updatedAt: any;
     dev_key: string;
     prod_key: string;
     password: string;
@@ -17,4 +14,7 @@ export declare class User extends Model<InferAttributes<User>, InferCreationAttr
     verified: CreationOptional<boolean>;
     otp: number | null;
     role: CreationOptional<SmallIntegerDataType>;
+    deleted_at: Date | null;
+    created_at: CreationOptional<Date>;
+    updated_at: CreationOptional<Date>;
 }

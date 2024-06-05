@@ -17,18 +17,6 @@ class User extends core_1.Model {
 }
 exports.User = User;
 __decorate([
-    decorators_legacy_1.DeletedAt,
-    __metadata("design:type", Object)
-], User.prototype, "deletedAt", void 0);
-__decorate([
-    decorators_legacy_1.CreatedAt,
-    __metadata("design:type", Object)
-], User.prototype, "createdAt", void 0);
-__decorate([
-    decorators_legacy_1.UpdatedAt,
-    __metadata("design:type", Object)
-], User.prototype, "updatedAt", void 0);
-__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.TEXT),
     __metadata("design:type", String)
 ], User.prototype, "dev_key", void 0);
@@ -87,3 +75,18 @@ __decorate([
     (0, decorators_legacy_1.Default)(4),
     __metadata("design:type", Object)
 ], User.prototype, "role", void 0);
+__decorate([
+    decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deletedAt"),
+    __metadata("design:type", Object)
+], User.prototype, "deleted_at", void 0);
+__decorate([
+    decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
+    __metadata("design:type", Object)
+], User.prototype, "created_at", void 0);
+__decorate([
+    decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
+    __metadata("design:type", Object)
+], User.prototype, "updated_at", void 0);

@@ -16,26 +16,16 @@ class Locations extends core_1.Model {
 }
 exports.Locations = Locations;
 __decorate([
-    decorators_legacy_1.DeletedAt,
-    (0, decorators_legacy_1.ColumnName)("deletedAt"),
-    __metadata("design:type", Object)
-], Locations.prototype, "deleted_at", void 0);
-__decorate([
-    decorators_legacy_1.CreatedAt,
-    (0, decorators_legacy_1.ColumnName)("createdAt"),
-    __metadata("design:type", Object)
-], Locations.prototype, "created_at", void 0);
-__decorate([
-    decorators_legacy_1.UpdatedAt,
-    (0, decorators_legacy_1.ColumnName)("updatedAt"),
-    __metadata("design:type", Object)
-], Locations.prototype, "updated_at", void 0);
-__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     decorators_legacy_1.PrimaryKey,
-    __metadata("design:type", Number)
+    __metadata("design:type", Object)
 ], Locations.prototype, "id", void 0);
+__decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", Number)
+], Locations.prototype, "city", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
@@ -79,3 +69,18 @@ __decorate([
     decorators_legacy_1.NotNull,
     __metadata("design:type", Object)
 ], Locations.prototype, "address", void 0);
+__decorate([
+    decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deletedAt"),
+    __metadata("design:type", Object)
+], Locations.prototype, "deleted_at", void 0);
+__decorate([
+    decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
+    __metadata("design:type", Object)
+], Locations.prototype, "created_at", void 0);
+__decorate([
+    decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
+    __metadata("design:type", Object)
+], Locations.prototype, "updated_at", void 0);

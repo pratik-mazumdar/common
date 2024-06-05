@@ -16,21 +16,6 @@ class Items extends core_1.Model {
 }
 exports.Items = Items;
 __decorate([
-    decorators_legacy_1.DeletedAt,
-    (0, decorators_legacy_1.ColumnName)("deletedAt"),
-    __metadata("design:type", Object)
-], Items.prototype, "deleted_at", void 0);
-__decorate([
-    decorators_legacy_1.CreatedAt,
-    (0, decorators_legacy_1.ColumnName)("createdAt"),
-    __metadata("design:type", Object)
-], Items.prototype, "created_at", void 0);
-__decorate([
-    decorators_legacy_1.UpdatedAt,
-    (0, decorators_legacy_1.ColumnName)("updatedAt"),
-    __metadata("design:type", Object)
-], Items.prototype, "updated_at", void 0);
-__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
     decorators_legacy_1.PrimaryKey,
@@ -121,3 +106,18 @@ __decorate([
     decorators_legacy_1.NotNull,
     __metadata("design:type", Number)
 ], Items.prototype, "maximum_per_order", void 0);
+__decorate([
+    decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deletedAt"),
+    __metadata("design:type", Object)
+], Items.prototype, "deleted_at", void 0);
+__decorate([
+    decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
+    __metadata("design:type", Object)
+], Items.prototype, "created_at", void 0);
+__decorate([
+    decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
+    __metadata("design:type", Object)
+], Items.prototype, "updated_at", void 0);

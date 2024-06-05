@@ -1,8 +1,5 @@
 import { Model, InferAttributes, InferCreationAttributes, CreationOptional } from "@sequelize/core";
 export declare class Items extends Model<InferAttributes<Items>, InferCreationAttributes<Items>> {
-    deleted_at: Date | null;
-    created_at: CreationOptional<Date>;
-    updated_at: CreationOptional<Date>;
     id: string;
     provider_id: string;
     location_id: string;
@@ -21,4 +18,7 @@ export declare class Items extends Model<InferAttributes<Items>, InferCreationAt
     return_window: string;
     price: number;
     maximum_per_order: number;
+    deleted_at: Date | null;
+    created_at: CreationOptional<Date>;
+    updated_at: CreationOptional<Date>;
 }
