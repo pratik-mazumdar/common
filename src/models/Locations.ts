@@ -20,18 +20,6 @@ export class Locations extends Model<
   InferAttributes<Locations>,
   InferCreationAttributes<Locations>
 > {
-  @DeletedAt
-  @ColumnName("deletedAt")
-  declare deleted_at: Date | null;
-
-  @CreatedAt
-  @ColumnName("createdAt")
-  declare created_at: CreationOptional<Date>;
-
-  @UpdatedAt
-  @ColumnName("updatedAt")
-  declare updated_at: CreationOptional<Date>;
-
   @Attribute(DataTypes.STRING)
   @NotNull
   @PrimaryKey
@@ -71,4 +59,16 @@ export class Locations extends Model<
   @Attribute(DataTypes.JSONB)
   @NotNull
   declare address: Record<any, any>;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }

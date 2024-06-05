@@ -8,6 +8,7 @@ import {
 } from "@sequelize/core";
 import {
   Attribute,
+  ColumnName,
   CreatedAt,
   Default,
   DeletedAt,
@@ -23,13 +24,6 @@ export class User extends Model<
   InferAttributes<User>,
   InferCreationAttributes<User>
 > {
-  @DeletedAt
-  declare deletedAt: Date | null;
-  @CreatedAt
-  declare createdAt: any;
-  @UpdatedAt
-  declare updatedAt: any;
-
   @Attribute(DataTypes.TEXT)
   declare dev_key: string;
 
@@ -77,4 +71,16 @@ export class User extends Model<
   @NotNull
   @Default(4)
   declare role: CreationOptional<SmallIntegerDataType>;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }

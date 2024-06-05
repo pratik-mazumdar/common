@@ -20,18 +20,6 @@ export class Items extends Model<
   InferAttributes<Items>,
   InferCreationAttributes<Items>
 > {
-  @DeletedAt
-  @ColumnName("deletedAt")
-  declare deleted_at: Date | null;
-
-  @CreatedAt
-  @ColumnName("createdAt")
-  declare created_at: CreationOptional<Date>;
-
-  @UpdatedAt
-  @ColumnName("updatedAt")
-  declare updated_at: CreationOptional<Date>;
-
   @Attribute(DataTypes.STRING)
   @NotNull
   @PrimaryKey
@@ -104,4 +92,16 @@ export class Items extends Model<
   @Attribute(DataTypes.SMALLINT)
   @NotNull
   declare maximum_per_order: number;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }

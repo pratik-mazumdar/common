@@ -21,18 +21,6 @@ export class SearchRequests extends Model<
   InferAttributes<SearchRequests>,
   InferCreationAttributes<SearchRequests>
 > {
-  @DeletedAt
-  @ColumnName("deleted_at")
-  declare deletedAt: Date | null;
-
-  @CreatedAt
-  @ColumnName("createdAt")
-  declare created_at: CreationOptional<Date>;
-
-  @UpdatedAt
-  @ColumnName("updatedAt")
-  declare updated_at: CreationOptional<Date>;
-
   @Attribute(DataTypes.BIGINT)
   @NotNull
   @PrimaryKey
@@ -56,4 +44,16 @@ export class SearchRequests extends Model<
   @Attribute(DataTypes.STRING)
   @NotNull
   declare bap_id: string;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: CreationOptional<Date>;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }

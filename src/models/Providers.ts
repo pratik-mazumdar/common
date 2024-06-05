@@ -20,18 +20,6 @@ export class Providers extends Model<
   InferAttributes<Providers>,
   InferCreationAttributes<Providers>
 > {
-  @DeletedAt
-  @ColumnName("deleted_at")
-  declare deletedAt: Date | null;
-
-  @CreatedAt
-  @ColumnName("createdAt")
-  declare created_at: CreationOptional<Date>;
-
-  @UpdatedAt
-  @ColumnName("updatedAt")
-  declare updated_at: CreationOptional<Date>;
-
   // This is the combination of provider_id and bpp_id
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -54,4 +42,16 @@ export class Providers extends Model<
   @Attribute(DataTypes.JSONB)
   @NotNull
   declare descriptor: Record<any, any>;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }
