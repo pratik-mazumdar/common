@@ -25,9 +25,9 @@ export class Locations extends Model<
   @PrimaryKey
   declare id: CreationOptional<string>;
 
-  @Attribute(DataTypes.SMALLINT)
+  @Attribute(DataTypes.STRING)
   @NotNull
-  declare city: number;
+  declare city: string;
 
   @Attribute(DataTypes.STRING)
   @NotNull

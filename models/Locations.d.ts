@@ -1,7 +1,7 @@
 import { Model, InferAttributes, InferCreationAttributes, CreationOptional } from "@sequelize/core";
 export declare class Locations extends Model<InferAttributes<Locations>, InferCreationAttributes<Locations>> {
     id: CreationOptional<string>;
-    city: number;
+    city: string;
     provider_id: string;
     label: CreationOptional<boolean>;
     days: CreationOptional<Array<number>>;

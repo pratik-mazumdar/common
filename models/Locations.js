@@ -22,9 +22,9 @@ __decorate([
     __metadata("design:type", Object)
 ], Locations.prototype, "id", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Locations.prototype, "city", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
