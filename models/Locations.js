@@ -44,14 +44,14 @@ __decorate([
     __metadata("design:type", Object)
 ], Locations.prototype, "days", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
     decorators_legacy_1.NotNull,
-    __metadata("design:type", String)
+    __metadata("design:type", Number)
 ], Locations.prototype, "start", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
     decorators_legacy_1.NotNull,
-    __metadata("design:type", String)
+    __metadata("design:type", Number)
 ], Locations.prototype, "end", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
