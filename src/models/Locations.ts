@@ -43,13 +43,13 @@ export class Locations extends Model<
   @Default([1, 2, 3, 4, 5, 6, 7])
   declare days: CreationOptional<Array<number>>;
 
-  @Attribute(DataTypes.STRING)
+  @Attribute(DataTypes.SMALLINT)
   @NotNull
-  declare start: string;
+  declare start: number;
 
-  @Attribute(DataTypes.STRING)
+  @Attribute(DataTypes.SMALLINT)
   @NotNull
-  declare end: string;
+  declare end: number;
 
   @Attribute(DataTypes.STRING)
   @NotNull
