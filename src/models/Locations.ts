@@ -5,6 +5,7 @@ import {
   DataTypes,
   CreationOptional,
 } from "@sequelize/core";
+import { SMALLINT } from "@sequelize/core/_non-semver-use-at-your-own-risk_/abstract-dialect/data-types.js";
 import {
   Attribute,
   Default,
@@ -41,7 +42,7 @@ export class Locations extends Model<
 
   @Attribute(DataTypes.ARRAY(DataTypes.SMALLINT))
   @Default([1, 2, 3, 4, 5, 6, 7])
-  declare days: CreationOptional<Array<number>>;
+  declare days: CreationOptional<Array<SMALLINT>>;
 
   @Attribute(DataTypes.SMALLINT)
   @NotNull

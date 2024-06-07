@@ -38,9 +38,9 @@ __decorate([
     __metadata("design:type", Object)
 ], Items.prototype, "label", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
     decorators_legacy_1.NotNull,
-    (0, decorators_legacy_1.Default)(false),
+    (0, decorators_legacy_1.Default)(0),
     __metadata("design:type", Object)
 ], Items.prototype, "stock", void 0);
 __decorate([

@@ -38,10 +38,10 @@ export class Items extends Model<
   @Default(true)
   declare label: CreationOptional<boolean>;
 
-  @Attribute(DataTypes.BOOLEAN)
+  @Attribute(DataTypes.SMALLINT)
   @NotNull
-  @Default(false)
-  declare stock: CreationOptional<boolean>;
+  @Default(0)
+  declare stock: CreationOptional<number>;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
