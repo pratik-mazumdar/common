@@ -39,9 +39,9 @@ export class Locations extends Model<
   @Default(true)
   declare label: CreationOptional<boolean>;
 
-  @Attribute(DataTypes.ARRAY(DataTypes.SMALLINT))
+  @Attribute(DataTypes.ARRAY(DataTypes.INTEGER))
   @Default([1, 2, 3, 4, 5, 6, 7])
-  declare days: CreationOptional<Uint16Array>;
+  declare days: CreationOptional<number>;
 
   @Attribute(DataTypes.SMALLINT)
   @NotNull

@@ -39,7 +39,7 @@ __decorate([
     __metadata("design:type", Object)
 ], Locations.prototype, "label", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.ARRAY(core_1.DataTypes.SMALLINT)),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.ARRAY(core_1.DataTypes.INTEGER)),
     (0, decorators_legacy_1.Default)([1, 2, 3, 4, 5, 6, 7]),
     __metadata("design:type", Object)
 ], Locations.prototype, "days", void 0);

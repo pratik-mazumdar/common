@@ -4,7 +4,7 @@ export declare class Locations extends Model<InferAttributes<Locations>, InferCr
     city: string;
     provider_id: string;
     label: CreationOptional<boolean>;
-    days: CreationOptional<Uint16Array>;
+    days: CreationOptional<number>;
     start: number;
     end: number;
     gps: string;
