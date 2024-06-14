@@ -14,5 +14,7 @@ declare const _default: {
     msg_email_sent: string;
     msg_registered: string;
     msg_updated: string;
+    msg_email_reset_email: string;
+    msg_empty: string;
 };
 export default _default;

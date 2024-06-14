@@ -16,4 +16,6 @@ exports.default = {
     msg_email_sent: "Email sent to the address you provided.",
     msg_registered: "You are now registered",
     msg_updated: "Updated",
+    msg_email_reset_email: "Email sent to the address you provided if found in the database",
+    msg_empty: "No data found",
 };

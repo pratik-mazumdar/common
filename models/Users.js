@@ -38,6 +38,7 @@ __decorate([
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
     decorators_legacy_1.NotNull,
+    decorators_legacy_1.Unique,
     (0, decorators_legacy_1.Default)(core_1.sql.uuidV4),
     __metadata("design:type", Object)
 ], User.prototype, "id", void 0);
