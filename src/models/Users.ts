@@ -14,6 +14,7 @@ import {
   DeletedAt,
   NotNull,
   PrimaryKey,
+  Unique,
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
 import { IsEmail, IsIn } from "@sequelize/validator.js";
@@ -41,6 +42,7 @@ export class User extends Model<
 
   @Attribute(DataTypes.UUID)
   @NotNull
+  @Unique
   @Default(sql.uuidV4)
   declare id: CreationOptional<UUID>;
 

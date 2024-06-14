@@ -10,10 +10,11 @@ export default {
   error_resend_email: "Your OTP has expired or invalid otp",
   error_invalid_headers: "Forbidden",
   error_invalid_env: "Environment must be prod or dev",
-  error_generate_new_portal_key: "Generate new portal key",
-
   msg_email_sent_verbose: 'Email sent to %s with Subject: "%s"',
   msg_email_sent: "Email sent to the address you provided.",
   msg_registered: "You are now registered",
   msg_updated: "Updated",
+  msg_email_reset_email:
+    "Email sent to the address you provided if found in the database",
+  msg_empty: "No data found",
 };
