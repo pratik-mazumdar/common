@@ -13,8 +13,8 @@ exports.Analytics = void 0;
 const node_crypto_1 = require("node:crypto");
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
-let Analytics = class Analytics extends core_1.Model {
-};
+class Analytics extends core_1.Model {
+}
 exports.Analytics = Analytics;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
@@ -28,6 +28,24 @@ __decorate([
     decorators_legacy_1.NotNull,
     __metadata("design:type", Object)
 ], Analytics.prototype, "user_id", void 0);
-exports.Analytics = Analytics = __decorate([
-    (0, decorators_legacy_1.Table)({ timestamps: false })
-], Analytics);
+__decorate([
+    decorators_legacy_1.DeletedAt,
+    (0, decorators_legacy_1.ColumnName)("deletedAt"),
+    __metadata("design:type", Object)
+], Analytics.prototype, "deleted_at", void 0);
+__decorate([
+    decorators_legacy_1.CreatedAt,
+    (0, decorators_legacy_1.ColumnName)("createdAt"),
+    __metadata("design:type", Object)
+], Analytics.prototype, "created_at", void 0);
+__decorate([
+    decorators_legacy_1.UpdatedAt,
+    (0, decorators_legacy_1.ColumnName)("updatedAt"),
+    __metadata("design:type", Object)
+], Analytics.prototype, "updated_at", void 0);
+Analytics.addScope("defaultScope", {
+    attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
+});
+Analytics.addScope("withTime", {
+    attributes: { include: ["deleted_at", "updated_at", "created_at"] },
+});

@@ -8,13 +8,15 @@ import {
 } from "@sequelize/core";
 import {
   Attribute,
+  ColumnName,
+  CreatedAt,
   Default,
+  DeletedAt,
   NotNull,
   PrimaryKey,
-  Table,
+  UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
 
-@Table({ timestamps: false })
 export class Analytics extends Model<
   InferAttributes<Analytics>,
   InferCreationAttributes<Analytics>
@@ -28,4 +30,24 @@ export class Analytics extends Model<
   @Attribute(DataTypes.UUID)
   @NotNull
   declare user_id: CreationOptional<UUID>;
+
+  @DeletedAt
+  @ColumnName("deletedAt")
+  declare deleted_at: Date | null;
+
+  @CreatedAt
+  @ColumnName("createdAt")
+  declare created_at: CreationOptional<Date>;
+
+  @UpdatedAt
+  @ColumnName("updatedAt")
+  declare updated_at: CreationOptional<Date>;
 }
+
+Analytics.addScope("defaultScope", {
+  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
+});
+
+Analytics.addScope("withTime", {
+  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
+});

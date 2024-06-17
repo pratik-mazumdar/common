@@ -14,7 +14,6 @@ import {
   DeletedAt,
   NotNull,
   PrimaryKey,
-  Table,
   Unique,
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
@@ -22,7 +21,6 @@ import { IsEmail, IsIn } from "@sequelize/validator.js";
 import { SmallIntegerDataType } from "sequelize/lib/data-types";
 import { UUID } from "node:crypto";
 
-@Table({ timestamps: false })
 export class User extends Model<
   InferAttributes<User>,
   InferCreationAttributes<User>
@@ -90,5 +88,17 @@ export class User extends Model<
 }
 
 User.addScope("defaultScope", {
-  attributes: { exclude: ["password"] },
+  attributes: {
+    exclude: ["password", "deleted_at", "updated_at", "created_at"],
+  },
+});
+
+User.addScope("withTime", {
+  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
+});
+
+User.addScope("withTimePassword", {
+  attributes: {
+    include: ["password", "deleted_at", "updated_at", "created_at"],
+  },
 });

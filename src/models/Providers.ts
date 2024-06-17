@@ -14,10 +14,8 @@ import {
   NotNull,
   PrimaryKey,
   ColumnName,
-  Table,
 } from "@sequelize/core/decorators-legacy";
 
-@Table({ timestamps: false })
 export class Providers extends Model<
   InferAttributes<Providers>,
   InferCreationAttributes<Providers>
@@ -61,3 +59,11 @@ export class Providers extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
+
+Providers.addScope("defaultScope", {
+  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
+});
+
+Providers.addScope("withTime", {
+  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
+});

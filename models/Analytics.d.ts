@@ -4,4 +4,7 @@ import { CreationOptional, InferAttributes, InferCreationAttributes, Model } fro
 export declare class Analytics extends Model<InferAttributes<Analytics>, InferCreationAttributes<Analytics>> {
     id: CreationOptional<UUID>;
     user_id: CreationOptional<UUID>;
+    deleted_at: Date | null;
+    created_at: CreationOptional<Date>;
+    updated_at: CreationOptional<Date>;
 }
