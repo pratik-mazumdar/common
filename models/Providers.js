@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Providers = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
-class Providers extends core_1.Model {
-}
+let Providers = class Providers extends core_1.Model {
+};
 exports.Providers = Providers;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
@@ -57,3 +57,6 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Providers.prototype, "updated_at", void 0);
+exports.Providers = Providers = __decorate([
+    (0, decorators_legacy_1.Table)({ timestamps: false })
+], Providers);

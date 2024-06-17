@@ -14,6 +14,7 @@ import {
   DeletedAt,
   NotNull,
   PrimaryKey,
+  Table,
   Unique,
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
@@ -21,6 +22,7 @@ import { IsEmail, IsIn } from "@sequelize/validator.js";
 import { SmallIntegerDataType } from "sequelize/lib/data-types";
 import { UUID } from "node:crypto";
 
+@Table({ timestamps: false })
 export class User extends Model<
   InferAttributes<User>,
   InferCreationAttributes<User>

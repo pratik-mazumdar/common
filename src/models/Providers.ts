@@ -14,8 +14,10 @@ import {
   NotNull,
   PrimaryKey,
   ColumnName,
+  Table,
 } from "@sequelize/core/decorators-legacy";
 
+@Table({ timestamps: false })
 export class Providers extends Model<
   InferAttributes<Providers>,
   InferCreationAttributes<Providers>

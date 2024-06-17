@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Items = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
-class Items extends core_1.Model {
-}
+let Items = class Items extends core_1.Model {
+};
 exports.Items = Items;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
@@ -126,9 +126,6 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Items.prototype, "updated_at", void 0);
-Items.addScope("defaultScope", {
-    attributes: { exclude: ["deleted_at", "created_at", "updated_at"] },
-});
-Items.addScope("withTime", {
-    attributes: { include: ["deleted_at", "created_at", "updated_at"] },
-});
+exports.Items = Items = __decorate([
+    (0, decorators_legacy_1.Table)({ timestamps: false })
+], Items);

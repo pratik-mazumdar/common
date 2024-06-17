@@ -13,8 +13,8 @@ exports.User = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
 const validator_js_1 = require("@sequelize/validator.js");
-class User extends core_1.Model {
-}
+let User = class User extends core_1.Model {
+};
 exports.User = User;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.TEXT),
@@ -91,6 +91,9 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], User.prototype, "updated_at", void 0);
+exports.User = User = __decorate([
+    (0, decorators_legacy_1.Table)({ timestamps: false })
+], User);
 User.addScope("defaultScope", {
     attributes: { exclude: ["password"] },
 });
