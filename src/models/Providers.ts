@@ -32,6 +32,10 @@ export class Providers extends Model<
   @NotNull
   declare bpp_id: string;
 
+  @Attribute(DataTypes.STRING)
+  @NotNull
+  declare bpp_uri: string;
+
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(true)

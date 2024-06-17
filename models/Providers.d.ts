@@ -2,6 +2,7 @@ import { Model, InferAttributes, InferCreationAttributes, CreationOptional } fro
 export declare class Providers extends Model<InferAttributes<Providers>, InferCreationAttributes<Providers>> {
     id: string;
     bpp_id: string;
+    bpp_uri: string;
     label: CreationOptional<boolean>;
     name: string;
     descriptor: Record<any, any>;

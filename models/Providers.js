@@ -27,6 +27,11 @@ __decorate([
     __metadata("design:type", String)
 ], Providers.prototype, "bpp_id", void 0);
 __decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", String)
+], Providers.prototype, "bpp_uri", void 0);
+__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(true),

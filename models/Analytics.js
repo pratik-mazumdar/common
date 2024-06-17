@@ -13,8 +13,8 @@ exports.Analytics = void 0;
 const node_crypto_1 = require("node:crypto");
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
-class Analytics extends core_1.Model {
-}
+let Analytics = class Analytics extends core_1.Model {
+};
 exports.Analytics = Analytics;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
@@ -28,3 +28,6 @@ __decorate([
     decorators_legacy_1.NotNull,
     __metadata("design:type", Object)
 ], Analytics.prototype, "user_id", void 0);
+exports.Analytics = Analytics = __decorate([
+    (0, decorators_legacy_1.Table)({ timestamps: false })
+], Analytics);

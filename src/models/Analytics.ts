@@ -11,8 +11,10 @@ import {
   Default,
   NotNull,
   PrimaryKey,
+  Table,
 } from "@sequelize/core/decorators-legacy";
 
+@Table({ timestamps: false })
 export class Analytics extends Model<
   InferAttributes<Analytics>,
   InferCreationAttributes<Analytics>
