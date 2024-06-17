@@ -45,4 +45,3 @@ exports.logger = logger;
 logger.add(new winston_1.default.transports.Console({
     level: "debug",
 }));
-logger.error(new Error("Hello"));
