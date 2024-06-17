@@ -38,6 +38,11 @@ __decorate([
     __metadata("design:type", Object)
 ], Items.prototype, "label", void 0);
 __decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", String)
+], Items.prototype, "domain", void 0);
+__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(0),
@@ -121,3 +126,9 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Items.prototype, "updated_at", void 0);
+Items.addScope("defaultScope", {
+    attributes: { exclude: ["deleted_at", "created_at", "updated_at"] },
+});
+Items.addScope("withTime", {
+    attributes: { include: ["deleted_at", "created_at", "updated_at"] },
+});

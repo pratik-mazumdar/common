@@ -17,4 +17,9 @@ export default {
   msg_email_reset_email:
     "Email sent to the address you provided if found in the database",
   msg_empty: "No data found",
+  error_missing_value: "Missing value:",
+  error_missing_header: "Missing Header Value:",
+  error_invalid_header: "Invalid Header Value",
+  error_invalid_select_req:
+    "Quantity must be smaller than stock or Provider's label is set to false",
 };

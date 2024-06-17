@@ -16,5 +16,9 @@ declare const _default: {
     msg_updated: string;
     msg_email_reset_email: string;
     msg_empty: string;
+    error_missing_value: string;
+    error_missing_header: string;
+    error_invalid_header: string;
+    error_invalid_select_req: string;
 };
 export default _default;

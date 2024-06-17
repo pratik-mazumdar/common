@@ -4,6 +4,7 @@ export declare class Items extends Model<InferAttributes<Items>, InferCreationAt
     provider_id: string;
     location_id: string;
     label: CreationOptional<boolean>;
+    domain: string;
     stock: CreationOptional<number>;
     returnable: CreationOptional<boolean>;
     cancellable: CreationOptional<boolean>;

@@ -38,6 +38,10 @@ export class Items extends Model<
   @Default(true)
   declare label: CreationOptional<boolean>;
 
+  @Attribute(DataTypes.STRING)
+  @NotNull
+  declare domain: string;
+
   @Attribute(DataTypes.SMALLINT)
   @NotNull
   @Default(0)
@@ -105,3 +109,11 @@ export class Items extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
+
+Items.addScope("defaultScope", {
+  attributes: { exclude: ["deleted_at", "created_at", "updated_at"] },
+});
+
+Items.addScope("withTime", {
+  attributes: { include: ["deleted_at", "created_at", "updated_at"] },
+});
