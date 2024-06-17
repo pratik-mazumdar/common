@@ -28,6 +28,11 @@ const transformBack = () => {
 };
 const logger = winston_1.default.createLogger({
     format: combine(colorize(), transform(), winston_1.default.format.printf((info) => {
+        if (info instanceof Error) {
+            return `${new Date().toISOString()} [${[
+                "\x1B[31merror\x1B[39m",
+            ]}] : ${info}`;
+        }
         const newLog = (0, lodash_1.cloneDeep)(info);
         delete newLog.level;
         delete newLog.oldMessage;
@@ -40,3 +45,4 @@ exports.logger = logger;
 logger.add(new winston_1.default.transports.Console({
     level: "debug",
 }));
+logger.error(new Error("Hello"));

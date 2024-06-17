@@ -32,9 +32,15 @@ const logger: Logger = winston.createLogger({
     colorize(),
     transform(),
     winston.format.printf((info: any) => {
+      if (info instanceof Error) {
+        return `${new Date().toISOString()} [${[
+          "\x1B[31merror\x1B[39m",
+        ]}] : ${info}`;
+      }
       const newLog = cloneDeep(info);
       delete newLog.level;
       delete newLog.oldMessage;
+
       return `${new Date().toISOString()} [${info.level}] : ${JSON.stringify(
         newLog,
         null,
@@ -52,5 +58,7 @@ logger.add(
     level: "debug",
   })
 );
+
+logger.error(new Error("Hello"));
 
 export { logger };
