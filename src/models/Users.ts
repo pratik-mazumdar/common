@@ -86,19 +86,3 @@ export class User extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
-
-User.addScope("defaultScope", {
-  attributes: {
-    exclude: ["password", "deleted_at", "updated_at", "created_at"],
-  },
-});
-
-User.addScope("withTime", {
-  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});
-
-User.addScope("withTimePassword", {
-  attributes: {
-    include: ["password", "deleted_at", "updated_at", "created_at"],
-  },
-});

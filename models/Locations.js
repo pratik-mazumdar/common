@@ -84,9 +84,3 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Locations.prototype, "updated_at", void 0);
-Locations.addScope("defaultScope", {
-    attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-Locations.addScope("withTime", {
-    attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

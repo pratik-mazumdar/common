@@ -91,16 +91,3 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], User.prototype, "updated_at", void 0);
-User.addScope("defaultScope", {
-    attributes: {
-        exclude: ["password", "deleted_at", "updated_at", "created_at"],
-    },
-});
-User.addScope("withTime", {
-    attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});
-User.addScope("withTimePassword", {
-    attributes: {
-        include: ["password", "deleted_at", "updated_at", "created_at"],
-    },
-});

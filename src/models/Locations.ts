@@ -76,11 +76,3 @@ export class Locations extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
-
-Locations.addScope("defaultScope", {
-  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-
-Locations.addScope("withTime", {
-  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

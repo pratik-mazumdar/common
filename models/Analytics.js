@@ -43,9 +43,3 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Analytics.prototype, "updated_at", void 0);
-Analytics.addScope("defaultScope", {
-    attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-Analytics.addScope("withTime", {
-    attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

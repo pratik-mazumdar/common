@@ -59,11 +59,3 @@ export class Providers extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
-
-Providers.addScope("defaultScope", {
-  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-
-Providers.addScope("withTime", {
-  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

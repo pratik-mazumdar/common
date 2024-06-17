@@ -126,9 +126,3 @@ __decorate([
     (0, decorators_legacy_1.ColumnName)("updatedAt"),
     __metadata("design:type", Object)
 ], Items.prototype, "updated_at", void 0);
-Items.addScope("defaultScope", {
-    attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-Items.addScope("withTime", {
-    attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

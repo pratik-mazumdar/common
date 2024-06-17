@@ -43,11 +43,3 @@ export class Analytics extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
-
-Analytics.addScope("defaultScope", {
-  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-
-Analytics.addScope("withTime", {
-  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});

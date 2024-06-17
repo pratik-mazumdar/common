@@ -109,11 +109,3 @@ export class Items extends Model<
   @ColumnName("updatedAt")
   declare updated_at: CreationOptional<Date>;
 }
-
-Items.addScope("defaultScope", {
-  attributes: { exclude: ["deleted_at", "updated_at", "created_at"] },
-});
-
-Items.addScope("withTime", {
-  attributes: { include: ["deleted_at", "updated_at", "created_at"] },
-});
