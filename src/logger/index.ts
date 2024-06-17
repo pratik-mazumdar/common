@@ -59,6 +59,4 @@ logger.add(
   })
 );
 
-logger.error(new Error("Hello"));
-
 export { logger };
