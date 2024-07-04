@@ -18,7 +18,6 @@ import {
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
 import { IsEmail, IsIn } from "@sequelize/validator.js";
-import { SmallIntegerDataType } from "sequelize/lib/data-types";
 import { UUID } from "node:crypto";
 
 export class User extends Model<
@@ -34,6 +33,9 @@ export class User extends Model<
   @Attribute(DataTypes.STRING)
   @NotNull
   declare password: string;
+
+  @Attribute(DataTypes.STRING)
+  declare address: string;
 
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
@@ -72,7 +74,7 @@ export class User extends Model<
   @Attribute(DataTypes.SMALLINT)
   @NotNull
   @Default(4)
-  declare role: CreationOptional<SmallIntegerDataType>;
+  declare role: CreationOptional<number>;
 
   @DeletedAt
   @ColumnName("deletedAt")

@@ -30,6 +30,10 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    __metadata("design:type", String)
+], User.prototype, "address", void 0);
+__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),

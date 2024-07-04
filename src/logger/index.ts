@@ -1,5 +1,4 @@
 import winston, { Logger } from "winston";
-import "dotenv/config";
 import util from "util";
 import { cloneDeep } from "lodash";
 
