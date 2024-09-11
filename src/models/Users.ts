@@ -64,7 +64,7 @@ export class User extends Model<
   declare prod_verified: CreationOptional<boolean>;
 
   @Attribute(DataTypes.INTEGER)
-  declare otp: CreationOptional<number>;
+  declare otp: number | null;
 
   @Attribute(DataTypes.INTEGER)
   @NotNull
