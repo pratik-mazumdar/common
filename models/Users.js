@@ -35,23 +35,15 @@ __decorate([
 ], User.prototype, "address", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", String)
+], User.prototype, "name", void 0);
+__decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     validator_js_1.IsEmail,
     decorators_legacy_1.NotNull,
     __metadata("design:type", String)
 ], User.prototype, "company_email", void 0);
-__decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
-    decorators_legacy_1.NotNull,
-    (0, decorators_legacy_1.Default)(false),
-    __metadata("design:type", Object)
-], User.prototype, "prod_verified", void 0);
-__decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
-    decorators_legacy_1.NotNull,
-    decorators_legacy_1.Unique,
-    (0, decorators_legacy_1.Default)(core_1.sql.uuidV4),
-    __metadata("design:type", Object)
-], User.prototype, "id", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
@@ -70,6 +62,12 @@ __decorate([
     (0, decorators_legacy_1.Default)(false),
     __metadata("design:type", Object)
 ], User.prototype, "verified", void 0);
+__decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
+    decorators_legacy_1.NotNull,
+    (0, decorators_legacy_1.Default)(false),
+    __metadata("design:type", Object)
+], User.prototype, "prod_verified", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.INTEGER),
     __metadata("design:type", Object)
