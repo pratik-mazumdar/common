@@ -10,7 +10,7 @@ export declare class User extends Model<InferAttributes<User>, InferCreationAttr
     mobile_no: string;
     verified: CreationOptional<boolean>;
     prod_verified: CreationOptional<boolean>;
-    otp: CreationOptional<number>;
+    otp: number | null;
     role: CreationOptional<number>;
     deleted_at: CreationOptional<Date>;
     created_at: CreationOptional<Date>;
