@@ -18,11 +18,11 @@ class User extends core_1.Model {
 exports.User = User;
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.TEXT),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], User.prototype, "dev_key", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.TEXT),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], User.prototype, "prod_key", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
@@ -31,7 +31,7 @@ __decorate([
 ], User.prototype, "password", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], User.prototype, "address", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
