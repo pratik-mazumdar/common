@@ -34,11 +34,17 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "address", void 0);
 __decorate([
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
+    validator_js_1.IsEmail,
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", String)
+], User.prototype, "company_email", void 0);
+__decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
     __metadata("design:type", Object)
-], User.prototype, "display", void 0);
+], User.prototype, "prod_verified", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
     decorators_legacy_1.NotNull,
@@ -56,12 +62,6 @@ __decorate([
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
-    (0, validator_js_1.IsIn)(["BUYER:10"]),
-    __metadata("design:type", String)
-], User.prototype, "select_service", void 0);
-__decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
-    decorators_legacy_1.NotNull,
     __metadata("design:type", String)
 ], User.prototype, "mobile_no", void 0);
 __decorate([
@@ -75,7 +75,7 @@ __decorate([
     __metadata("design:type", Object)
 ], User.prototype, "otp", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.SMALLINT),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.INTEGER),
     decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(4),
     __metadata("design:type", Object)

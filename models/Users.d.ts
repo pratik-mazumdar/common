@@ -6,10 +6,10 @@ export declare class User extends Model<InferAttributes<User>, InferCreationAttr
     prod_key: string;
     password: string;
     address: string;
-    display: CreationOptional<boolean>;
+    company_email: string;
+    prod_verified: CreationOptional<boolean>;
     id: CreationOptional<UUID>;
     email: string;
-    select_service: string;
     mobile_no: string;
     verified: CreationOptional<boolean>;
     otp: number | null;

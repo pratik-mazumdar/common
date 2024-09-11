@@ -17,7 +17,7 @@ import {
   Unique,
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
-import { IsEmail, IsIn } from "@sequelize/validator.js";
+import { IsEmail } from "@sequelize/validator.js";
 import { UUID } from "node:crypto";
 
 export class User extends Model<
@@ -37,10 +37,15 @@ export class User extends Model<
   @Attribute(DataTypes.STRING)
   declare address: string;
 
+  @Attribute(DataTypes.STRING)
+  @IsEmail
+  @NotNull
+  declare company_email: string;
+
   @Attribute(DataTypes.BOOLEAN)
   @NotNull
   @Default(false)
-  declare display: CreationOptional<boolean>;
+  declare prod_verified: CreationOptional<boolean>;
 
   @Attribute(DataTypes.UUID)
   @NotNull
@@ -56,11 +61,6 @@ export class User extends Model<
 
   @Attribute(DataTypes.STRING)
   @NotNull
-  @IsIn(["BUYER:10"] as readonly any[])
-  declare select_service: string;
-
-  @Attribute(DataTypes.STRING)
-  @NotNull
   declare mobile_no: string;
 
   @Attribute(DataTypes.BOOLEAN)
@@ -71,7 +71,7 @@ export class User extends Model<
   @Attribute(DataTypes.INTEGER)
   declare otp: number | null;
 
-  @Attribute(DataTypes.SMALLINT)
+  @Attribute(DataTypes.INTEGER)
   @NotNull
   @Default(4)
   declare role: CreationOptional<number>;
