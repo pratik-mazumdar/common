@@ -22,17 +22,17 @@ export class User extends Model<
   InferCreationAttributes<User>
 > {
   @Attribute(DataTypes.TEXT)
-  declare dev_key: string;
+  declare dev_key: CreationOptional<string>;
 
   @Attribute(DataTypes.TEXT)
-  declare prod_key: string;
+  declare prod_key: CreationOptional<string>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
   declare password: string;
 
   @Attribute(DataTypes.STRING)
-  declare address: string;
+  declare address: CreationOptional<string>;
 
   @Attribute(DataTypes.STRING)
   @NotNull
@@ -64,7 +64,7 @@ export class User extends Model<
   declare prod_verified: CreationOptional<boolean>;
 
   @Attribute(DataTypes.INTEGER)
-  declare otp: number | null;
+  declare otp: CreationOptional<number>;
 
   @Attribute(DataTypes.INTEGER)
   @NotNull
@@ -73,7 +73,7 @@ export class User extends Model<
 
   @DeletedAt
   @ColumnName("deletedAt")
-  declare deleted_at: Date | null;
+  declare deleted_at: CreationOptional<Date>;
 
   @CreatedAt
   @ColumnName("createdAt")
