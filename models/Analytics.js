@@ -13,6 +13,7 @@ exports.Analytics = void 0;
 const node_crypto_1 = require("node:crypto");
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
+const validator_js_1 = require("@sequelize/validator.js");
 class Analytics extends core_1.Model {
 }
 exports.Analytics = Analytics;
@@ -24,22 +25,13 @@ __decorate([
     __metadata("design:type", Object)
 ], Analytics.prototype, "id", void 0);
 __decorate([
-    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.UUID),
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
+    validator_js_1.IsEmail,
     __metadata("design:type", Object)
-], Analytics.prototype, "user_id", void 0);
+], Analytics.prototype, "user_email", void 0);
 __decorate([
-    decorators_legacy_1.DeletedAt,
-    (0, decorators_legacy_1.ColumnName)("deletedAt"),
-    __metadata("design:type", Object)
-], Analytics.prototype, "deleted_at", void 0);
-__decorate([
-    decorators_legacy_1.CreatedAt,
-    (0, decorators_legacy_1.ColumnName)("createdAt"),
-    __metadata("design:type", Object)
-], Analytics.prototype, "created_at", void 0);
-__decorate([
-    decorators_legacy_1.UpdatedAt,
-    (0, decorators_legacy_1.ColumnName)("updatedAt"),
-    __metadata("design:type", Object)
-], Analytics.prototype, "updated_at", void 0);
+    (0, decorators_legacy_1.Attribute)(core_1.DataTypes.INTEGER),
+    decorators_legacy_1.NotNull,
+    __metadata("design:type", Number)
+], Analytics.prototype, "search_count", void 0);

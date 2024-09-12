@@ -2,7 +2,7 @@ import { Model, InferAttributes, InferCreationAttributes, CreationOptional } fro
 export declare class Companies extends Model<InferAttributes<Companies>, InferCreationAttributes<Companies>> {
     email: string;
     name: string;
-    pan: string;
+    pan: CreationOptional<string>;
     verified: CreationOptional<boolean>;
-    gstin: number;
+    gstin: CreationOptional<number>;
 }

@@ -35,7 +35,7 @@ const logger = winston_1.default.createLogger({
         const newLog = (0, lodash_1.cloneDeep)(info);
         delete newLog.level;
         delete newLog.oldMessage;
-        return `${new Date().toISOString()} [${info.level}] : ${JSON.stringify(newLog, null, 2)
+        return `${new Date().toISOString()} [${info.level}] : ${JSON.stringify(newLog?.message || newLog, null, 2)
             .replace(/\\n/g, "\n")
             .replace(/\\"/g, '"')}`;
     }), transformBack()),

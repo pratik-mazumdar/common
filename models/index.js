@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Analytics = exports.User = exports.SearchRequests = exports.Providers = exports.Locations = exports.Items = void 0;
+exports.Companies = exports.Analytics = exports.User = exports.SearchRequests = exports.Providers = exports.Locations = exports.Items = void 0;
 var Items_1 = require("./Items");
 Object.defineProperty(exports, "Items", { enumerable: true, get: function () { return Items_1.Items; } });
 var Locations_1 = require("./Locations");
@@ -13,3 +13,5 @@ var Users_1 = require("./Users");
 Object.defineProperty(exports, "User", { enumerable: true, get: function () { return Users_1.User; } });
 var Analytics_1 = require("./Analytics");
 Object.defineProperty(exports, "Analytics", { enumerable: true, get: function () { return Analytics_1.Analytics; } });
+var Companies_1 = require("./Companies");
+Object.defineProperty(exports, "Companies", { enumerable: true, get: function () { return Companies_1.Companies; } });

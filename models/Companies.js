@@ -31,17 +31,14 @@ __decorate([
 ], Companies.prototype, "name", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
-    decorators_legacy_1.NotNull,
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], Companies.prototype, "pan", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.BOOLEAN),
-    decorators_legacy_1.NotNull,
     (0, decorators_legacy_1.Default)(false),
     __metadata("design:type", Object)
 ], Companies.prototype, "verified", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
-    decorators_legacy_1.NotNull,
-    __metadata("design:type", Number)
+    __metadata("design:type", Object)
 ], Companies.prototype, "gstin", void 0);
