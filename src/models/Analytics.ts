@@ -8,14 +8,11 @@ import {
 } from "@sequelize/core";
 import {
   Attribute,
-  ColumnName,
-  CreatedAt,
   Default,
-  DeletedAt,
   NotNull,
   PrimaryKey,
-  UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
+import { IsEmail } from "@sequelize/validator.js";
 
 export class Analytics extends Model<
   InferAttributes<Analytics>,
@@ -27,19 +24,12 @@ export class Analytics extends Model<
   @Default(randomUUID())
   declare id: CreationOptional<UUID>;
 
-  @Attribute(DataTypes.UUID)
+  @Attribute(DataTypes.STRING)
   @NotNull
-  declare user_id: CreationOptional<UUID>;
+  @IsEmail
+  declare user_email: CreationOptional<string>;
 
-  @DeletedAt
-  @ColumnName("deletedAt")
-  declare deleted_at: Date | null;
-
-  @CreatedAt
-  @ColumnName("createdAt")
-  declare created_at: CreationOptional<Date>;
-
-  @UpdatedAt
-  @ColumnName("updatedAt")
-  declare updated_at: CreationOptional<Date>;
+  @Attribute(DataTypes.INTEGER)
+  @NotNull
+  declare search_count: number;
 }

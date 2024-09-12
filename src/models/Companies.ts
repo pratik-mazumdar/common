@@ -30,15 +30,12 @@ export class Companies extends Model<
   declare name: string;
 
   @Attribute(DataTypes.STRING)
-  @NotNull
-  declare pan: string;
+  declare pan: CreationOptional<string>;
 
   @Attribute(DataTypes.BOOLEAN)
-  @NotNull
   @Default(false)
   declare verified: CreationOptional<boolean>;
 
   @Attribute(DataTypes.STRING)
-  @NotNull
-  declare gstin: number;
+  declare gstin: CreationOptional<number>;
 }

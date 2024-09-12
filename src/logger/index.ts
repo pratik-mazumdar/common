@@ -41,7 +41,7 @@ const logger: Logger = winston.createLogger({
       delete newLog.oldMessage;
 
       return `${new Date().toISOString()} [${info.level}] : ${JSON.stringify(
-        newLog,
+        newLog?.message || newLog,
         null,
         2
       )
