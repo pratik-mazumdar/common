@@ -12,7 +12,6 @@ import {
   PrimaryKey,
   Unique,
 } from "@sequelize/core/decorators-legacy";
-import { IsEmail } from "@sequelize/validator.js";
 
 export class Companies extends Model<
   InferAttributes<Companies>,
@@ -21,7 +20,6 @@ export class Companies extends Model<
   @Attribute(DataTypes.STRING)
   @PrimaryKey
   @Unique
-  @IsEmail()
   @NotNull
   declare email: string;
 

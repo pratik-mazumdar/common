@@ -12,7 +12,6 @@ import {
   NotNull,
   PrimaryKey,
 } from "@sequelize/core/decorators-legacy";
-import { IsEmail } from "@sequelize/validator.js";
 
 export class Analytics extends Model<
   InferAttributes<Analytics>,
@@ -26,7 +25,6 @@ export class Analytics extends Model<
 
   @Attribute(DataTypes.STRING)
   @NotNull
-  @IsEmail()
   declare user_email: CreationOptional<string>;
 
   @Attribute(DataTypes.INTEGER)
