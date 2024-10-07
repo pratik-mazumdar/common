@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const core_1 = require("@sequelize/core");
 const decorators_legacy_1 = require("@sequelize/core/decorators-legacy");
+const validator_js_1 = require("@sequelize/validator.js");
 class User extends core_1.Model {
 }
 exports.User = User;
@@ -40,11 +41,13 @@ __decorate([
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
+    (0, validator_js_1.IsEmail)(),
     __metadata("design:type", String)
 ], User.prototype, "company_email", void 0);
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
+    (0, validator_js_1.IsEmail)(),
     decorators_legacy_1.PrimaryKey,
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);

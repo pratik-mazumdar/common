@@ -27,7 +27,7 @@ __decorate([
 __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.NotNull,
-    validator_js_1.IsEmail,
+    (0, validator_js_1.IsEmail)(),
     __metadata("design:type", Object)
 ], Analytics.prototype, "user_email", void 0);
 __decorate([

@@ -20,7 +20,7 @@ __decorate([
     (0, decorators_legacy_1.Attribute)(core_1.DataTypes.STRING),
     decorators_legacy_1.PrimaryKey,
     decorators_legacy_1.Unique,
-    validator_js_1.IsEmail,
+    (0, validator_js_1.IsEmail)(),
     decorators_legacy_1.NotNull,
     __metadata("design:type", String)
 ], Companies.prototype, "email", void 0);
