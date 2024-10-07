@@ -26,7 +26,7 @@ export class Analytics extends Model<
 
   @Attribute(DataTypes.STRING)
   @NotNull
-  @IsEmail
+  @IsEmail()
   declare user_email: CreationOptional<string>;
 
   @Attribute(DataTypes.INTEGER)

@@ -21,7 +21,7 @@ export class Companies extends Model<
   @Attribute(DataTypes.STRING)
   @PrimaryKey
   @Unique
-  @IsEmail
+  @IsEmail()
   @NotNull
   declare email: string;
 

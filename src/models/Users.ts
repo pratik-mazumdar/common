@@ -15,6 +15,7 @@ import {
   PrimaryKey,
   UpdatedAt,
 } from "@sequelize/core/decorators-legacy";
+import { IsEmail } from "@sequelize/validator.js";
 
 export class User extends Model<
   InferAttributes<User>,
@@ -39,10 +40,12 @@ export class User extends Model<
 
   @Attribute(DataTypes.STRING)
   @NotNull
+  @IsEmail()
   declare company_email: string;
 
   @Attribute(DataTypes.STRING)
   @NotNull
+  @IsEmail()
   @PrimaryKey
   declare email: string;
 
